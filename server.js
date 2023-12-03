@@ -15,6 +15,12 @@ app.get("/", (req, res)=>{
     res.send(filter)
 })
 
+app("/:id",(req, res)=>{
+    const reqID = req.params.id
+    const filter = data.find((a)=> a.id === reqID)
+    res.send(filter)
+})
+
 app.listen(2100,()=>{
     console.log("Server Started")
 })
