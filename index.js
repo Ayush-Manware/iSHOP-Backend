@@ -1,10 +1,12 @@
 const express = require("express")
 require('./database/config')
 const User = require("./database/user")
+const cors = require("cors")
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.get("/", (req, res)=>{
     res.send("Home")
