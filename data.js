@@ -1,19 +1,19 @@
-const advertisment = [];
-const home = [];
-const all = [];
-const grocery = [];
+// const advertisment = [];
+// const home = [];
+// const all = [];
+// const grocery = [];
 
-const fashion = [];
+// const fashion = [];
 
-const beautyProduct = [];
-const electronics = [];
-const ecommerceData = [
+// const beautyProduct = [];
+// const electronics = [];
+const Data = [
   {
     id: 1,
     image:
       "https://tse4.mm.bing.net/th?id=OIP.6p7zG6KwNCRgs9dBWKD0nQHaHa&pid=Api&P=0&h=180",
     price: 50749.0,
-    product_name: "Apple iPhone 13 (128GB) - Starlight",
+    title: "Apple iPhone 13 (128GB) - Starlight",
 
     Brand: "Apple",
     Model_Name: "IPhone",
@@ -30,7 +30,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.RGzUyLFAcgtCke0Cr769hgHaEw&pid=Api&P=0&h=180",
     price: 7699,
-    product_name: "Asus VivoBook 13.3-inch Laptop",
+    title: "Asus VivoBook 13.3-inch Laptop",
 
     Brand: "Asus",
     Model_Name: "VivoBook",
@@ -49,7 +49,7 @@ const ecommerceData = [
     image:
       "https://images.telkom.co.za/backend-files/2023-11/iPhone_15_Plus_128GB_Black_slide.png",
     price: 9299,
-    product_name:
+    title:
       "realme narzo N48 (Purple, 4GB+64GB) 22W Segment Fast Charging | 48MP Primary Camera",
 
     Brand: "Realme",
@@ -66,7 +66,7 @@ const ecommerceData = [
     id: 4,
     image: "https://m.media-amazon.com/images/I/81zMfbWnNDL._UL1500_.jpg",
     price: 1234,
-    product_name: "Titan silver Watch",
+    title: "Titan silver Watch",
 
     Brand: "Titan",
     Colour: "silver",
@@ -86,7 +86,7 @@ const ecommerceData = [
     image:
       "https://images-na.ssl-images-amazon.com/images/I/61qc69ILWdL._SL1280_.jpg",
     price: 237,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -106,7 +106,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.PQ6LCdBFI8fklGvBTpwFCAHaHa&pid=Api&P=0&h=180",
     price: 2150,
-    product_name: "PREP + PRIME FIX+",
+    title: "PREP + PRIME FIX+",
 
     key1: "Soothes and refreshes skin",
     key2: "Hydrating",
@@ -128,13 +128,11 @@ const ecommerceData = [
     price: 654,
     heading:
       "Anouk Women Black Ethnic Motifs Printed Kurta with Palazzos & With Dupatta",
-
     key1: "Red and white geometric print fit & flare dress",
     key2: "V-neck",
     key3: "Three-quarter, regular sleeves",
     key4: "Gathered or pleated detail",
     key5: "Midi length in flared hem",
-
     Material_Care: "100% Cotton Machine wash",
     catagory: "fashion",
     subCategory: "woman",
@@ -173,7 +171,7 @@ const ecommerceData = [
     key5: "curved hem",
 
     Material_Care: "Cotton Hand wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.8",
   },
@@ -205,7 +203,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.gY-fjKOXbXyQGATcYa630gHaIp&pid=Api&P=0&h=180",
     price: 120,
-    product_name: "Fortune chakki Fresh Atta ,",
+    title: "Fortune chakki Fresh Atta ,",
 
     Brand: "FORTUNE",
     Item_Weight: "230 Grams",
@@ -225,7 +223,7 @@ const ecommerceData = [
     id: 12,
     image: "https://m.media-amazon.com/images/I/71mZPdDjUeL.jpg",
     price: 120,
-    product_name: "Fortune chakki Fresh Atta ,",
+    title: "Fortune chakki Fresh Atta ,",
 
     Brand: "FORTUNE",
     "Item Weight": "230 Grams",
@@ -246,7 +244,7 @@ const ecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6443/6443177cv13d.jpg",
     price: 50749.0,
-    product_name: "Apple iPhone 13 (128GB) - Starlight",
+    title: "Apple iPhone 13 (128GB) - Starlight",
 
     Brand: "Apple",
     Model_Name: "iPhone 13",
@@ -263,7 +261,7 @@ const ecommerceData = [
     image:
       "https://i.ebayimg.com/00/s/OTk5WDE2MDA=/z/dpEAAOSwhvNfRrK~/$_57.jpg",
     price: 799.0,
-    product_name: "Apple iPhone SE (2nd Gen) - White",
+    title: "Apple iPhone SE (2nd Gen) - White",
 
     Brand: "Apple",
     Model_Name: "iPhone SE (2nd Gen)",
@@ -280,7 +278,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.E9FTOwZCvrD6_6UGnem1TwHaHa&pid=Api&P=0&h=180",
     price: 699.0,
-    product_name: "Apple iPhone 13 Mini (128GB) - Blue",
+    title: "Apple iPhone 13 Mini (128GB) - Blue",
 
     Brand: "Apple",
     Model_Name: "iPhone 13 Mini",
@@ -297,7 +295,7 @@ const ecommerceData = [
     image:
       "https://d1dtruvuor2iuy.cloudfront.net/media/catalog/product/i/p/iphone_13_pro_color_graphite_1__1.jpg",
     price: 999.0,
-    product_name: "Apple iPhone 13 Pro (256GB) - Graphite",
+    title: "Apple iPhone 13 Pro (256GB) - Graphite",
 
     Brand: "Apple",
     Model_Name: "iPhone 13 Pro",
@@ -314,7 +312,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.ORjGbzRd3YanpDIbc3_1cQHaJb&pid=Api&P=0&h=180",
     price: 1199.0,
-    product_name: "Apple iPhone 13 Pro Max (512GB) - Gold",
+    title: "Apple iPhone 13 Pro Max (512GB) - Gold",
 
     Brand: "Apple",
     Model_Name: "iPhone 13 Pro Max",
@@ -331,7 +329,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.kuKOUEoQY2GVhtGweIwA4gHaKB&pid=Api&P=0&h=180",
     price: 1199.0,
-    product_name: "Apple iPhone 12 (128GB) - Black",
+    title: "Apple iPhone 12 (128GB) - Black",
 
     Brand: "Apple",
     Model_Name: "iPhone 12",
@@ -348,7 +346,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.EZqu0KQK2tygYil04Q_E-wHaHp&pid=Api&P=0&h=180",
     price: 899.0,
-    product_name: "Apple iPhone 11 (64GB) - White",
+    title: "Apple iPhone 11 (64GB) - White",
 
     Brand: "Apple",
     Model_Name: "iPhone 11",
@@ -365,7 +363,7 @@ const ecommerceData = [
     image:
       "https://www.vedion.pl/pol_pl_Apple-iPhone-XR-Coral-64GB-Smartfon-Klasa-A-13144_4.jpg",
     price: 649.0,
-    product_name: "Apple iPhone XR (64GB) - Coral",
+    title: "Apple iPhone XR (64GB) - Coral",
 
     Brand: "Apple",
     Model_Name: "iPhone XR",
@@ -382,7 +380,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.uQ3Kux8TdCm2EMIIVOaKygHaHa&pid=Api&P=0&h=180",
     price: 549.0,
-    product_name: "Apple iPhone X (64GB) - Silver",
+    title: "Apple iPhone X (64GB) - Silver",
 
     Brand: "Apple",
     Model_Name: "iPhone X",
@@ -399,7 +397,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.1v-EphEv_pCXeGLH_VAp2gHaGr&pid=Api&P=0&h=180",
     price: 799.0,
-    product_name: "Apple iPhone 11 Pro (256GB) - Midnight Green",
+    title: "Apple iPhone 11 Pro (256GB) - Midnight Green",
 
     Brand: "Apple",
     Model_Name: "iPhone 11 Pro",
@@ -417,7 +415,7 @@ const ecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2990/2990013cv1a.jpg",
     price: 7699,
-    product_name: "Asus VivoBook 13.3-inch Laptop",
+    title: "Asus VivoBook 13.3-inch Laptop",
 
     Brand: "Asus",
     Model_Name: "VivoBook",
@@ -436,7 +434,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.VLOGbGtgbYDP-6sGL6hrpQHaHI&pid=Api&P=0&h=180",
     price: 8499,
-    product_name: "Dell XPS 13.4-inch Laptop",
+    title: "Dell XPS 13.4-inch Laptop",
 
     Brand: "Dell",
     Model_Name: "XPS",
@@ -455,7 +453,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.KV4ypdEVzz-0qlEH1FX7IQHaE1&pid=Api&P=0&h=180",
     price: 6999,
-    product_name: "HP Spectre x360 13.3-inch Laptop",
+    title: "HP Spectre x360 13.3-inch Laptop",
 
     Brand: "HP",
     Model_Name: "Spectre x360",
@@ -474,7 +472,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.1zDqOt9-V5DZVnrbZrHcvgHaFs&pid=Api&P=0&h=180",
     price: 8999,
-    product_name: "Lenovo ThinkPad X1 Carbon 14-inch Laptop",
+    title: "Lenovo ThinkPad X1 Carbon 14-inch Laptop",
 
     Brand: "Lenovo",
     Model_Name: "ThinkPad X1 Carbon",
@@ -493,7 +491,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.gypHBLwpat8Zbopwv-GAHgHaFS&pid=Api&P=0&h=180",
     price: 7799,
-    product_name: "Acer Swift 3 14-inch Laptop",
+    title: "Acer Swift 3 14-inch Laptop",
 
     Brand: "Acer",
     Model_Name: "Swift 3",
@@ -512,7 +510,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.4tr4kBBB-b5BH9c7giqt1wHaFE&pid=Api&P=0&h=180",
     price: 7499,
-    product_name: "Microsoft Surface Laptop 4 13.5-inch",
+    title: "Microsoft Surface Laptop 4 13.5-inch",
 
     Brand: "Microsoft",
     Model_Name: "Surface Laptop 4",
@@ -531,7 +529,7 @@ const ecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6452/6452585_sd.jpg",
     price: 7999,
-    product_name: "Razer Blade 15 Base Gaming Laptop",
+    title: "Razer Blade 15 Base Gaming Laptop",
 
     Brand: "Razer",
     Model_Name: "Blade 15",
@@ -550,7 +548,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.lPTarZEUomrE-EnvSFUuwwHaFb&pid=Api&P=0&h=180",
     price: 8899,
-    product_name: "LG Gram 17-inch Laptop",
+    title: "LG Gram 17-inch Laptop",
 
     Brand: "LG",
     Model_Name: "Gram",
@@ -569,7 +567,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.3GJc17v1NlixESfObeUvkAHaFs&pid=Api&P=0&h=180",
     price: 7699,
-    product_name: "Sony VAIO S 13.3-inch Laptop",
+    title: "Sony VAIO S 13.3-inch Laptop",
 
     Brand: "Sony",
     Model_Name: "VAIO S",
@@ -588,7 +586,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.FCnYD25fYvrfxmRuQ2ieXwHaFS&pid=Api&P=0&h=180",
     price: 8999,
-    product_name: "Dell Inspiron 15 15.6-inch Laptop",
+    title: "Dell Inspiron 15 15.6-inch Laptop",
 
     Brand: "Dell",
     Model_Name: "Inspiron 15",
@@ -607,7 +605,7 @@ const ecommerceData = [
     image:
       "https://store.hp.com/UKStore/Html/Merch/Images/c06045798_1750x1285.jpg",
     price: 8499,
-    product_name: "HP Pavilion 14 14-inch Laptop",
+    title: "HP Pavilion 14 14-inch Laptop",
 
     Brand: "HP",
     Model_Name: "Pavilion 14",
@@ -626,7 +624,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.5wXvXe-0xNCAxLbkcuaACQHaFQ&pid=Api&P=0&h=180",
     price: 7899,
-    product_name: "Lenovo ThinkPad L13 13.3-inch Laptop",
+    title: "Lenovo ThinkPad L13 13.3-inch Laptop",
 
     Brand: "Lenovo",
     Model_Name: "ThinkPad L13",
@@ -645,7 +643,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.Q9yPp7_aWGbCwgzxvaN9-QHaFX&pid=Api&P=0&h=180",
     price: 6999,
-    product_name: "Acer Aspire 5 15.6-inch Laptop",
+    title: "Acer Aspire 5 15.6-inch Laptop",
 
     Brand: "Acer",
     Model_Name: "Aspire 5",
@@ -664,7 +662,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.jwkn7f9h9v-o2SX-21ZwWAHaE0&pid=Api&P=0&h=180",
     price: 8799,
-    product_name: "Microsoft Surface Laptop Go 12.4-inch",
+    title: "Microsoft Surface Laptop Go 12.4-inch",
 
     Brand: "Microsoft",
     Model_Name: "Surface Laptop Go",
@@ -683,7 +681,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.AjYndGDjiIiQgz8e7b_8ywHaEm&pid=Api&P=0&h=180",
     price: 100699,
-    product_name: "Apple MacBook Air 13.3-inch Laptop",
+    title: "Apple MacBook Air 13.3-inch Laptop",
 
     Brand: "Apple",
     Model_Name: "MacBook Air",
@@ -702,7 +700,7 @@ const ecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6115/6115550_rd.jpg",
     price: 7999,
-    product_name: "Razer Blade 17 Pro Gaming Laptop",
+    title: "Razer Blade 17 Pro Gaming Laptop",
 
     Brand: "Razer",
     Model_Name: "Blade 17 Pro",
@@ -721,7 +719,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.WUPiZk7JFmqp6nhMTg78YAHaHa&pid=Api&P=0&h=180",
     price: 7899,
-    product_name: "LG Gram 14 14-inch Laptop",
+    title: "LG Gram 14 14-inch Laptop",
 
     Brand: "LG",
     Model_Name: "Gram 14",
@@ -740,7 +738,7 @@ const ecommerceData = [
     image:
       "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VI0AAOSw9f9eUCu8/$_86.JPG",
     price: 7599,
-    product_name: "Sony VAIO E 15.6-inch Laptop",
+    title: "Sony VAIO E 15.6-inch Laptop",
 
     Brand: "Sony",
     Model_Name: "VAIO E",
@@ -760,7 +758,7 @@ const ecommerceData = [
     image:
       "https://www.droidafrica.net/wp-content/uploads/2023/11/Logic-L66-full-specification-and-price.jpg",
     price: 9299,
-    product_name:
+    title:
       "Realme Narzo N48 (Purple, 4GB+64GB) 22W Segment Fast Charging | 48MP Primary Camera",
 
     Brand: "Realme",
@@ -778,7 +776,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIF.W%2bE9AA79%2f7mLshfqTTr%2fUw&pid=Api&P=0&h=180",
     price: 10999,
-    product_name:
+    title:
       "Realme 8 Pro (Blue, 6GB+128GB) 50W SuperDart Charging | 108MP Quad Camera",
 
     Brand: "Realme",
@@ -796,7 +794,7 @@ const ecommerceData = [
     image:
       "https://i.bikroy-st.com/lg-velvet-8-128gb-new-for-sale-dhaka-103/1ec7aa8c-7d1c-4aea-935d-0913afab91d3/1200/630/fitted.jpg",
     price: 7999,
-    product_name:
+    title:
       "Realme C25s (Green, 4GB+64GB) 18W Quick Charge | 48MP Dual Camera",
 
     Brand: "Realme",
@@ -814,7 +812,7 @@ const ecommerceData = [
     image:
       "https://i.pinimg.com/736x/cc/df/72/ccdf7248117aba169991b5cf63ac5a9d.jpg",
     price: 8999,
-    product_name:
+    title:
       "Realme 7i (Silver, 4GB+64GB) 18W Quick Charge | 64MP Quad Camera",
 
     Brand: "Realme",
@@ -832,7 +830,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIF.ZY6Qi0IiIbpZ2FVm8SPLpw&pid=Api&P=0&h=180",
     price: 7499,
-    product_name:
+    title:
       "Realme C11 (Gray, 3GB+32GB) 5000mAh Battery | 13MP Dual Camera",
 
     Brand: "Realme",
@@ -851,7 +849,7 @@ const ecommerceData = [
     image:
       "https://n3.sdlcdn.com/imgs/b/e/3/Titan-Silver-Steel-Analog-Watch-SDL545819100-1-70e7c.jpg",
     price: 1234,
-    product_name: "Titan Silver Watch",
+    title: "Titan Silver Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -869,7 +867,7 @@ const ecommerceData = [
     image:
       "https://staticimg.titan.co.in/production/India/Titan/detail2/90081NL01J.jpg",
     price: 1399,
-    product_name: "Titan Chronograph Watch",
+    title: "Titan Chronograph Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -889,7 +887,7 @@ const ecommerceData = [
     image:
       "https://staticimg.titan.co.in/production/India/Titan/detail2/1721YM01.jpg",
     price: 999,
-    product_name: "Titan Gold Plated Watch",
+    title: "Titan Gold Plated Watch",
 
     Brand: "Titan",
     Colour: "Gold",
@@ -908,7 +906,7 @@ const ecommerceData = [
     id: 49,
     image: "https://staticimg.titan.co.in/Titan/Catalog/90125WL02_1.jpg",
     price: 1499,
-    product_name: "Titan Rose Gold Watch",
+    title: "Titan Rose Gold Watch",
 
     Brand: "Titan",
     Colour: "Rose Gold",
@@ -927,7 +925,7 @@ const ecommerceData = [
     image:
       "https://rukminim1.flixcart.com/image/1664/1664/watch/8/g/6/9162sl01-titan-original-imadptzuwhgnqzmk.jpeg?q=90",
     price: 1299,
-    product_name: "Titan Classic Leather Watch",
+    title: "Titan Classic Leather Watch",
 
     Brand: "Titan",
     Colour: "Brown",
@@ -946,7 +944,7 @@ const ecommerceData = [
     image:
       "https://i.pinimg.com/736x/d6/82/70/d682703c1ecdf49b102dfb0027e5c183.jpg",
     price: 1899,
-    product_name: "Titan Sports Watch",
+    title: "Titan Sports Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -965,7 +963,7 @@ const ecommerceData = [
     image:
       "https://www.stylegods.com/wp-content/uploads/2016/09/rust-1021x1024.jpg",
     price: 1699,
-    product_name: "Titan Luxury Watch",
+    title: "Titan Luxury Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -984,7 +982,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.wzzROYx08eAepXxeWeSbnQHaHa&pid=Api&P=0&h=180",
     price: 999,
-    product_name: "Titan Minimalist Watch",
+    title: "Titan Minimalist Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -1003,7 +1001,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.FcgrRV0v2LrosqtZX61JdAHaHa&pid=Api&P=0&h=180",
     price: 1299,
-    product_name: "Titan Diamond-Encrusted Watch",
+    title: "Titan Diamond-Encrusted Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -1022,7 +1020,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.FcgrRV0v2LrosqtZX61JdAHaHa&pid=Api&P=0&h=180",
     price: 1799,
-    product_name: "Titan Women's Fashion Watch",
+    title: "Titan Women's Fashion Watch",
 
     Brand: "Titan",
     Colour: "Rose Gold",
@@ -1040,7 +1038,7 @@ const ecommerceData = [
     id: 56,
     image: "https://staticimg.titan.co.in/Titan/Catalog/1676SL01_1.jpg",
     price: 1199,
-    product_name: "Titan Square Dial Watch",
+    title: "Titan Square Dial Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -1059,7 +1057,7 @@ const ecommerceData = [
     image:
       "https://cdn.igp.com/f_auto,q_auto,t_prodl/products/p-titan-elegant-analog-watch-for-women-113711-m.jpg",
     price: 1499,
-    product_name: "Titan Elegant Watch",
+    title: "Titan Elegant Watch",
 
     Brand: "Titan",
     Colour: "Gold",
@@ -1078,7 +1076,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.KgqXjFeocjR5bjI4zTRmiQHaHa&pid=Api&P=0&h=180",
     price: 1699,
-    product_name: "Titan Business Watch",
+    title: "Titan Business Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -1096,7 +1094,7 @@ const ecommerceData = [
     id: 59,
     image: "https://staticimg.titan.co.in/Titan/Catalog/1707NL01_1.jpg",
     price: 1599,
-    product_name: "Titan Casual Watch",
+    title: "Titan Casual Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -1115,7 +1113,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.Kbih2ja0XsosM5cseOgxKAHaJ4&pid=Api&P=0&h=180",
     price: 1899,
-    product_name: "Titan Designer Watch",
+    title: "Titan Designer Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -1134,7 +1132,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.iVJoyQkDMRAIJzlomEJ2iAAAAA&pid=Api&P=0&h=180",
     price: 1199,
-    product_name: "Titan Stylish Watch",
+    title: "Titan Stylish Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -1854,7 +1852,7 @@ const ecommerceData = [
     subCategory: "kids",
     rating: "4.4",
   },
-  //mens
+  //men
   {
     id: 99,
     image:
@@ -1869,7 +1867,7 @@ const ecommerceData = [
     key5: "Material: Polyester and Viscose",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -1887,7 +1885,7 @@ const ecommerceData = [
     key5: "Material: Denim",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -1905,7 +1903,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -1923,7 +1921,7 @@ const ecommerceData = [
     key5: "Material: Polyester and Viscose",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.3",
   },
@@ -1941,7 +1939,7 @@ const ecommerceData = [
     key5: "Material: Genuine Leather",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.7",
   },
@@ -1959,7 +1957,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -1977,7 +1975,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -1995,7 +1993,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -2013,7 +2011,7 @@ const ecommerceData = [
     key5: "Material: Polyester",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.7",
   },
@@ -2031,7 +2029,7 @@ const ecommerceData = [
     key5: "Material: Stainless Steel",
 
     Material_Care: "Wipe with a clean cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -2049,7 +2047,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -2067,7 +2065,7 @@ const ecommerceData = [
     key5: "Material: Genuine Leather",
 
     Material_Care: "Wipe with a damp cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -2085,7 +2083,7 @@ const ecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -2103,7 +2101,7 @@ const ecommerceData = [
     key5: "Material: Synthetic",
 
     Material_Care: "Wipe with a clean cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -2121,7 +2119,7 @@ const ecommerceData = [
     key5: "Material: Metal and Polycarbonate",
 
     Material_Care: "Clean with a microfiber cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -2131,7 +2129,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.MFhs12UEbfokD7zA23pInAHaHa&pid=Api&P=0&h=180",
     price: 50,
-    product_name: "Lays Potato Chips - Classic Salted, 52g",
+    title: "Lays Potato Chips - Classic Salted, 52g",
 
     Brand: "Lays",
     Diet_Type: "Vegetarian",
@@ -2153,7 +2151,7 @@ const ecommerceData = [
     image:
       "https://www.india-store.de/images/thumbnail/produkte/large/food01/002/kurkure_green_chutney.jpg",
     price: 35,
-    product_name: "Kurkure Namkeen - Green Chutney Rajasthani Style, 58g",
+    title: "Kurkure Namkeen - Green Chutney Rajasthani Style, 58g",
 
     Brand: "Kurkure",
     Diet_Type: "Vegetarian",
@@ -2176,7 +2174,7 @@ const ecommerceData = [
     image:
       "https://www.bigbasket.com/media/uploads/p/l/100566579_1-kurkure-namkeen-puffcorn-mad-masala.jpg",
     price: 45,
-    product_name: "Kurkure Namkeen - Puffcorn, 80g",
+    title: "Kurkure Namkeen - Puffcorn, 80g",
 
     Brand: "Kurkure",
     Diet_Type: "Vegetarian",
@@ -2198,7 +2196,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.uIHVdwqamO0f79biFHwTKAHaKl&pid=Api&P=0&h=180",
     price: 60,
-    product_name: "Haldiram's Aloo Bhujia - Spicy Potato Noodles, 150g",
+    title: "Haldiram's Aloo Bhujia - Spicy Potato Noodles, 150g",
 
     Brand: "Haldiram's",
     Diet_Type: "Vegetarian",
@@ -2220,7 +2218,7 @@ const ecommerceData = [
     image:
       "https://cdn.shopify.com/s/files/1/1610/6897/products/oie_161647496qVjGhz1_grande.jpg?v=1602859766",
     price: 70,
-    product_name: "Kissan Fruit Jam - Mixed Fruit, 320g",
+    title: "Kissan Fruit Jam - Mixed Fruit, 320g",
 
     Brand: "Kissan",
     Diet_Type: "Vegetarian",
@@ -2242,7 +2240,7 @@ const ecommerceData = [
     image:
       "https://www.jiomart.com/images/product/600x600/491551830/bingo-peri-peri-mad-angles-130-g-product-images-o491551830-p491551830-0-202203150713.jpg",
     price: 50,
-    product_name: "Bingo! Mad Angles - Peri Peri, 85g",
+    title: "Bingo! Mad Angles - Peri Peri, 85g",
 
     Brand: "Bingo!",
     Diet_Type: "Vegetarian",
@@ -2264,7 +2262,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.rOFtRrTDsEpwI5CHGY8uKgHaHa&pid=Api&P=0&h=180",
     price: 55,
-    product_name: "Parle-G Biscuits - Original, 200g",
+    title: "Parle-G Biscuits - Original, 200g",
 
     Brand: "Parle-G",
     Diet_Type: "Vegetarian",
@@ -2286,7 +2284,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.1eqKykZfX1FEzFAQHGIsYwHaHa&pid=Api&P=0&h=180",
     price: 40,
-    product_name: "Maggi 2-Minute Noodles - Masala, 70g",
+    title: "Maggi 2-Minute Noodles - Masala, 70g",
 
     Brand: "Maggi",
     Diet_Type: "Vegetarian",
@@ -2308,7 +2306,7 @@ const ecommerceData = [
     image:
       "https://annachi.fr/wp-content/uploads/2022/08/Saffola-Oats-Masala-Coriander.jpg",
     price: 65,
-    product_name: "Saffola Oats - Masala & Coriander, 38g",
+    title: "Saffola Oats - Masala & Coriander, 38g",
 
     Brand: "Saffola",
     Diet_Type: "Vegetarian",
@@ -2330,7 +2328,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.UrKbx415Kh5b5F1oMu8dxwHaGg&pid=Api&P=0&h=180",
     price: 75,
-    product_name: "Haldiram's Soan Papdi - Classic Indian Sweet, 250g",
+    title: "Haldiram's Soan Papdi - Classic Indian Sweet, 250g",
 
     Brand: "Haldiram's",
     Diet_Type: "Vegetarian",
@@ -2352,7 +2350,7 @@ const ecommerceData = [
     image:
       "https://www.bigbasket.com/media/uploads/p/l/280474_5-britannia-bourbon-chocolate-cream-biscuits.jpg",
     price: 55,
-    product_name: "Britannia Bourbon Biscuits - Chocolate Flavour, 120g",
+    title: "Britannia Bourbon Biscuits - Chocolate Flavour, 120g",
 
     Brand: "Britannia",
     Diet_Type: "Vegetarian",
@@ -2374,7 +2372,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.nJmZ2Hx9YAhhcA_cAVae1gHaHa&pid=Api&P=0&h=180",
     price: 60,
-    product_name: "Cadbury Dairy Milk Chocolate Bar - 40g",
+    title: "Cadbury Dairy Milk Chocolate Bar - 40g",
 
     Brand: "Cadbury",
     Diet_Type: "Vegetarian",
@@ -2397,7 +2395,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.nKB6TAVC3ZjdLAZS5XVOJQHaHa&pid=Api&P=0&h=180",
     price: 55,
-    product_name: "Lays Potato Chips - Classic Salted, 70g",
+    title: "Lays Potato Chips - Classic Salted, 70g",
 
     Brand: "Lays",
     Diet_Type: "Vegetarian",
@@ -2420,7 +2418,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.i3An2q7q3w830e1lwFAOdQHaH6&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Fresh Tomatoes",
+    title: "Fresh Tomatoes",
 
     Item_Weight: "500 Grams",
     Number_of_Items: 5,
@@ -2436,7 +2434,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.YNfCtBmWznRnb_v2URt0aQHaHa&pid=Api&P=0&h=180",
     price: 40,
-    product_name: "Bananas",
+    title: "Bananas",
 
     Item_Weight: "1 Kilogram",
     Number_of_Items: 6,
@@ -2452,7 +2450,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.DfaU-pSxB5aWC2uMPlFoiAHaHa&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2468,7 +2466,7 @@ const ecommerceData = [
     image:
       "https://hybrisprod.azureedge.net/sys-master-prod/he3/h54/8948136509470/65068_main.jpg_1700Wx1700H",
     price: 25,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2484,7 +2482,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.X9ynJQfAkAjXErR13CHjDQHaHa&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "cumin",
+    title: "cumin",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2502,7 +2500,7 @@ const ecommerceData = [
     image:
       "https://www.alphafoodie.com/wp-content/uploads/2020/04/Turmeric-Powder-Square-photo.jpeg",
     price: 20,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     Item_Weight: "150 Grams",
     Number_of_Items: 2,
@@ -2518,7 +2516,7 @@ const ecommerceData = [
     image:
       "https://www.onceuponachef.com/images/2013/12/basmati-rice-1200x912.jpg",
     price: 30,
-    product_name: "Basmati Rice",
+    title: "Basmati Rice",
 
     Item_Weight: "1 kg",
     Number_of_Items: 1,
@@ -2534,7 +2532,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.Rkm56aP3Kel0lQzMZjJ8xgHaFj&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Red Lentils",
+    title: "Red Lentils",
 
     Item_Weight: "500 Grams",
     Number_of_Items: 2,
@@ -2550,7 +2548,7 @@ const ecommerceData = [
     image:
       "https://i5.walmartimages.com/asr/a6f6fdd5-1482-45c8-a926-ca0e643951be.875089d20cc94e4e1becab143731149c.jpeg",
     price: 18,
-    product_name: "Garam Masala",
+    title: "Garam Masala",
 
     Item_Weight: "200 Grams",
     Number_of_Items: 1,
@@ -2566,7 +2564,7 @@ const ecommerceData = [
     image:
       "https://i.pinimg.com/originals/a6/19/6e/a6196e885afe7e684c033ac41ad9e186.jpg",
     price: 25,
-    product_name: "Whole Wheat Flour",
+    title: "Whole Wheat Flour",
 
     Item_Weight: "1.5 kg",
     Number_of_Items: 1,
@@ -2582,7 +2580,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.OrD-0SE3pvuxamciektv-AHaE8&pid=Api&P=0&h=180",
     price: 12,
-    product_name: "Green Tea",
+    title: "Green Tea",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2598,7 +2596,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.0WhWZ7Bef8yNm9CBWhDScgHaIl&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Honey",
+    title: "Honey",
 
     Item_Weight: "500 Grams",
     Number_of_Items: 1,
@@ -2614,7 +2612,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.CEwuREmOawNisBfTIP2zBQHaE7&pid=Api&P=0&h=180",
     price: 14,
-    product_name: "Chickpeas",
+    title: "Chickpeas",
 
     Item_Weight: "400 Grams",
     Number_of_Items: 2,
@@ -2630,7 +2628,7 @@ const ecommerceData = [
     image:
       "https://i5.walmartimages.com/asr/023f668d-3120-4bc1-856a-9f247c1f2523.09c0677395a54eaafcb73fb7fe80fa72.jpeg",
     price: 35,
-    product_name: "Olive Oil",
+    title: "Olive Oil",
 
     Item_Weight: "750 ml",
     Number_of_Items: 1,
@@ -2646,7 +2644,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.x06q6QBj_yYghhqtsZgD5AHaG2&pid=Api&P=0&h=180",
     price: 28,
-    product_name: "Quinoa",
+    title: "Quinoa",
 
     Item_Weight: "250 Grams",
     Number_of_Items: 3,
@@ -2662,7 +2660,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.Vzt54qScZDNUp4jljxlrigHaHa&pid=Api&P=0&h=180",
     price: 18,
-    product_name: "Black Pepper",
+    title: "Black Pepper",
 
     Item_Weight: "150 Grams",
     Number_of_Items: 2,
@@ -2678,7 +2676,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.6lpCTGp1vfhBactY-AwilAHaHa&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Almonds",
+    title: "Almonds",
 
     Item_Weight: "200 Grams",
     Number_of_Items: 1,
@@ -2694,7 +2692,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.msnSQb9azJFTWc9bf024MwHaHa&pid=Api&P=0&h=180",
     price: 16,
-    product_name: "Whole Cumin Seeds",
+    title: "Whole Cumin Seeds",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2710,7 +2708,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.xcrDBryJPJPA3m3NQhGXLgHaLH&pid=Api&P=0&h=180",
     price: 14,
-    product_name: "Chia Seeds",
+    title: "Chia Seeds",
 
     Item_Weight: "250 Grams",
     Number_of_Items: 2,
@@ -2726,7 +2724,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.0ysAcFqy--PIlqXxWEsrIQHaFA&pid=Api&P=0&h=180",
     price: 20,
-    product_name: "Dried Apricots",
+    title: "Dried Apricots",
 
     Item_Weight: "300 Grams",
     Number_of_Items: 1,
@@ -2742,7 +2740,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.sux4tFLajxTkTFlnD2bQ-wHaHa&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Organic Brown Rice",
+    title: "Organic Brown Rice",
 
     Item_Weight: "1 kg",
     Number_of_Items: 1,
@@ -2758,7 +2756,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.FntLOnPgH3pOmcZWvljTjgHaHm&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Mustard Seeds",
+    title: "Mustard Seeds",
     product_details: {
       Item_Weight: "150 Grams",
       Number_of_Items: 2,
@@ -2774,7 +2772,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.p6cW5VWMKZD-82xxSksRbAHaJQ&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Organic Maple Syrup",
+    title: "Organic Maple Syrup",
     product_details: {
       Item_Weight: "500 ml",
       Number_of_Items: 1,
@@ -2790,7 +2788,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.dfEyfuhq2j9GsONxMJp0ZgHaFi&pid=Api&P=0&h=180",
     price: 18,
-    product_name: "Whole Coriander Seeds",
+    title: "Whole Coriander Seeds",
 
     Type: "Spice",
     Category: "Whole Spices",
@@ -2808,7 +2806,7 @@ const ecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.9nXBFWD-mj2qAeXDizco-gHaH_&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Earl Grey Tea",
+    title: "Earl Grey Tea",
 
     Type: "Tea",
     Category: "Tea and Infusions",
@@ -2826,7 +2824,7 @@ const ecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.S74IxtwJ0cklwEN3OolEowHaFj&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Masala Chai",
+    title: "Masala Chai",
 
     Item_Weight: "250 Grams",
     Number_of_Items: 1,
@@ -2842,7 +2840,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.nYVnnpt4IiOSbjSESJpyMAHaE8&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Roasted Coffee Beans",
+    title: "Roasted Coffee Beans",
 
     Item_Weight: "500 Grams",
     Number_of_Items: 1,
@@ -2858,7 +2856,7 @@ const ecommerceData = [
     image:
       "https://images.creativemarket.com/0.1.0/ps/6060971/1820/2730/m1/fpnw/wm1/qcdpmm5cfnlh1124gwnh0i6fmc0xtaa8epavtqaalgnhhxgcdvctqzgoo6yn15vo-.jpg?1552511804&s=4737547c4f3287e4552d1397af26e319",
     price: 18,
-    product_name: "Orange Juice",
+    title: "Orange Juice",
 
     Item_Weight: "1 liter",
     Number_of_Items: 1,
@@ -2874,7 +2872,7 @@ const ecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.XOHacRpgP9KdBs3Hg2Fz6AHaLH&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Mango Lassi",
+    title: "Mango Lassi",
 
     Item_Weight: "750 ml",
     Number_of_Items: 1,
@@ -2890,7 +2888,7 @@ const ecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.JZ9SnKKvF6sUSu5S7fOk6AHaHa&pid=Api&P=0&h=180",
     price: 12,
-    product_name: "Green Tea",
+    title: "Green Tea",
 
     Item_Weight: "100 Grams",
     Number_of_Items: 3,
@@ -2906,7 +2904,7 @@ const ecommerceData = [
     image:
       "https://rukminim2.flixcart.com/image/850/1000/kp2y2kw0/primer/c/y/i/50-long-lasting-makeup-fixer-natural-aloevera-with-vitamin-e-original-imag3e29unbuq2hw.jpeg?q=90",
     price: 999,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -2924,7 +2922,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQILnloPqzY0XbRYCOn92CPEWjJqUxglaxIJBjEqHuBo6MJ9XEvDjwBNFxuVjbvoNLhX8pYTrs24Vj2tCC2c-nUvGSe4j7Vx2bvu_Hv9GQpiBhMbHh6pz-1wA&usqp=CAE",
     price: 237,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -2942,7 +2940,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSvK2JxD3ydu138hszMEoTx0hgjj7xczgPOpnaIpDg6nsE_choVgKQXIyOSnoyZhrBoA6S2jFkfNTz27yyjCOy6Ew9yqolA1i4orumo8X0WfjT0i42j5fwP&usqp=CAE",
     price: 3300,
-    product_name: "M.A.C Studio Fix Powder Plus Foundation - C2 (15g)",
+    title: "M.A.C Studio Fix Powder Plus Foundation - C2 (15g)",
 
     key1: "12-Hour Medium-To-Full Coverage",
     key2: "Ultra-Matte Finish",
@@ -2958,7 +2956,7 @@ const ecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_MW5K01_1x1_0.png?width=1080&height=1080",
     price: 2150,
-    product_name: "PREP + PRIME FIX+",
+    title: "PREP + PRIME FIX+",
 
     key1: "Soothes and refreshes skin",
     key2: "Hydrating",
@@ -2975,7 +2973,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSuBVb2w2SICrcRYoMf6wRD_U7WYcdDc9Oty1ZfNmVP7wIpEA2sp6SVqQwIUfkCoQBcbOiQxnVZv9Te8ZYkLSwLca7mQy2-SCpiUrY7g5_iB4usWm3nf621hpEQSFPdrfFlsUh4OyY&usqp=CAc",
     price: 1950,
-    product_name: "MATTE LIPSTICK",
+    title: "MATTE LIPSTICK",
 
     key1: "Amplified: cream finish",
     key2: "Cremesheen: high-shine finish",
@@ -2992,7 +2990,7 @@ const ecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_SMXF08_1x1_0.png?width=1080&height=1080",
     price: 2200,
-    product_name: "LUSTREGLASS LIPSTICK",
+    title: "LUSTREGLASS LIPSTICK",
     key1: "Lustrous glossy finish",
     key2: "Sheer, buildable coverage",
     key3: "Long-wearing colour, up to 8 hours",
@@ -3008,7 +3006,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1113100/OGbQIWJjh2-8904409701648_1.jpg?dpr=1",
     price: 2223,
-    product_name:
+    title:
       "Swiss Beauty Professional Makeup Brush Set - Black, Silver (12 Pcs) ",
     key1: "Made with soft bristles to ensure skin-friendly application",
     key2: "Densely-packed bristles offer optimum coverage of powdered and mineral makeup",
@@ -3024,7 +3022,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/1083119/O2BE-FBnwB-8904323443648_1.jpg?dpr=1",
     price: 970,
-    product_name: "Fragrance & Beyond Fragrance Primer For Unisex (30ml)",
+    title: "Fragrance & Beyond Fragrance Primer For Unisex (30ml)",
     key1: "Perfume primer for men and women infused with hydrating ingredients for long-lasting scent",
     key2: "Nourishes and moisturizes skin for stronger Perfume hold",
     key3: "Keeps skin from drying and scent from disappearing",
@@ -3038,7 +3036,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/colorbar/943126/0/ZvLuQ4sH-y-gfI1aTpBcQ-943126_1.jpg?dpr=1",
     price: 721,
-    product_name: "Colorbar Spotlight Illuminating Lotion (30ml)",
+    title: "Colorbar Spotlight Illuminating Lotion (30ml)",
 
     key1: "Light-reflecting pigments lend the skin a naturally radiant glow",
     key2: "Enriched with mulberry extract to nourish and illuminate skin",
@@ -3057,7 +3055,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1046927/iBA02UPFrm-1046927_1.jpg?dpr=1",
     price: 1322,
-    product_name: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
+    title: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
 
     key1: "it has one swipe pigmentation",
     key2: "The shades are soft to touch",
@@ -3076,7 +3074,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/maybelline-new-york/COMBO_231016085231-SZ2/0/IyGpE9kBLF-9401652_1.jpeg?dpr=1",
     price: 815,
-    product_name: "Maybelline New York Colossal Combo - Kajal & Mascara",
+    title: "Maybelline New York Colossal Combo - Kajal & Mascara",
 
     key1: "Richly pigmented kajal delivers an intense matte color",
     key2: "Long-lasting, waterproof kajal stays for up to 10 hours without smudging",
@@ -3092,7 +3090,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1102622/PhS5-Dh__-773602596195_1.jpg?dpr=1",
     price: 2200,
-    product_name: "M.A.C Stack Mini Mascara - Black (8ml)",
+    title: "M.A.C Stack Mini Mascara - Black (8ml)",
 
     key1: "Formulated to make your lashes look fuller and thicker",
     key2: "Clump- and flake-resistant formula for long-lasting use",
@@ -3108,7 +3106,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/1125342/GjIxudoEW-1125342_1.jpg?dpr=1",
     price: 345,
-    product_name: "Colorbar Vegan Nail Lacquer - 286 Confetti (8ml) ",
+    title: "Colorbar Vegan Nail Lacquer - 286 Confetti (8ml) ",
 
     key1: "Infused with calcium and biotin to strengthen the nails, prevent chipping, and promote nail growth",
     key2: "Features a double flat-wide patented U-cut brush for one-stroke application",
@@ -3124,7 +3122,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1090181/QGW7ymxy4-1090181_1.jpg?dpr=1",
     price: 599,
-    product_name:
+    title:
       "Minimalist 16% Vitamin C Serum With Vitamin E & Ferulic Acid For Brightening (20ml)",
 
     key1: "Niacinamide encourages protein synthesis, minimises melanin concentration, and enhances skin complexion in two weeks",
@@ -3142,7 +3140,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/maybelline-new-york/COMBO_231016085231-SZ2/0/IyGpE9kBLF-9401652_1.jpeg?dpr=1",
     price: 815,
-    product_name: "Maybelline New York Colossal Combo - Kajal & Mascara",
+    title: "Maybelline New York Colossal Combo - Kajal & Mascara",
 
     key1: "Richly pigmented kajal delivers an intense matte color",
     key2: "Long-lasting, waterproof kajal stays for up to 10 hours without smudging",
@@ -3158,7 +3156,7 @@ const ecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1046927/iBA02UPFrm-1046927_1.jpg?dpr=1",
     price: 1326,
-    product_name: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
+    title: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
 
     key1: "it has one swipe pigmentation",
     key2: "The shades are soft to touch",
@@ -3176,7 +3174,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRDadOA2RetLlvnUjMM2akXSH2GDiUc5XT10xuGRiwNGgAAmS6uUE2qS-Fx_TNl7GOkLjKlqY0rVPKXb7RrWgWbwR81dvRklKeRbgLFiUeZYnonSFDlMb1LqBQJVWhZQGYl0MuZqu95&usqp=CAc",
     price: 1800,
-    product_name: "MAC Studio Fix Fluid Foundation (30ml)",
+    title: "MAC Studio Fix Fluid Foundation (30ml)",
 
     key1: "Medium to full coverage foundation",
     key2: "Long-wearing and oil-controlling formula",
@@ -3192,7 +3190,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxJcygtwZbk671xMDbNYQL3JvuljU7y_3rFKTMoG-OOpkF4mQzpZR6k9ewFvTmW36zFzI6BE8Gt43PuhdwwZUfdvHyoUSc2t8GlenN5g_0VTnEf6TNBYuR1ziv8ZpNBgO8qa767oda&usqp=CAc",
     price: 1200,
-    product_name: "MAC Ruby Woo Lipstick",
+    title: "MAC Ruby Woo Lipstick",
 
     key1: "Iconic matte red lipstick",
     key2: "Intense and highly-pigmented color",
@@ -3208,7 +3206,7 @@ const ecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_MT7E02_1x1_0.png?width=1080&height=1080",
     price: 1600,
-    product_name: "MAC Mineralize Skinfinish Highlighter",
+    title: "MAC Mineralize Skinfinish Highlighter",
     key1: "Luxurious and radiant highlighter",
     key2: "Illuminates the skin with a soft, luminous glow",
     key3: "Baked minerals provide a natural finish",
@@ -3222,7 +3220,7 @@ const ecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_M71P01_1x1_0.png?width=1080&height=1080",
     price: 1500,
-    product_name: "MAC Prep + Prime Fix+ Setting Spray (100ml)",
+    title: "MAC Prep + Prime Fix+ Setting Spray (100ml)",
 
     key1: "Multi-purpose setting spray",
     key2: "Hydrates, refreshes, and sets makeup",
@@ -3237,7 +3235,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdQxrvOlzaL3Spq7rFVb5SLTE8shCi3ezas7XAyNeRI_ZkZAhABlNE6lBNmL9YlvJWae-7xUnGDSUC2zEgD9kWFJCaAEv3YNepKoNC1onSF7_lIRBdYxW2UxFUpqxPH8mNTvZ6oOPlLA&usqp=CAc",
     price: 1999,
-    product_name: "MAC Retro Matte Liquid Lipcolour",
+    title: "MAC Retro Matte Liquid Lipcolour",
 
     key1: "Intense liquid matte lipstick",
     key2: "Long-lasting and non-feathering formula",
@@ -3253,7 +3251,7 @@ const ecommerceData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2_lh12lV73ogr8AEZ6tFsQ62W3yuZnV-8lguMar3ZxA&s",
     price: 1399,
-    product_name: "MAC Pro Longwear Concealer (9ml)",
+    title: "MAC Pro Longwear Concealer (9ml)",
 
     key1: "Lightweight, fluid concealer",
     key2: "Provides medium to full coverage",
@@ -3268,7 +3266,7 @@ const ecommerceData = [
     image:
       "https://cdn.helioswatchstore.com/production/media/catalog/product/cache/dd1c3400e344f54d12df823ec560a116/9/5/95146kd02_1.jpg",
     price: 17495,
-    product_name: "Titan silver Watch",
+    title: "Titan silver Watch",
 
     Brand: "Titan",
     Colour: "Green",
@@ -3287,7 +3285,7 @@ const ecommerceData = [
     image:
       "https://cdn.helioswatchstore.com/production/media/catalog/product/cache/d33ebde8b2069c657577ccfc338eb502/9/0/90146sl01_1.jpg",
     price: 8895,
-    product_name: "Titan silver Watch",
+    title: "Titan silver Watch",
 
     Brand: "Titan",
     Colour: "gray",
@@ -3309,7 +3307,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.6p7zG6KwNCRgs9dBWKD0nQHaHa&pid=Api&P=0&h=180",
     price: 50749.0,
-    product_name: "Apple iPhone 13 (128GB) - Starlight",
+    title: "Apple iPhone 13 (128GB) - Starlight",
 
     Brand: "Apple",
     "Model Name": "IPhone",
@@ -3326,7 +3324,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.RGzUyLFAcgtCke0Cr769hgHaEw&pid=Api&P=0&h=180",
     price: 7699,
-    product_name: "Asus VivoBook 13.3-inch Laptop",
+    title: "Asus VivoBook 13.3-inch Laptop",
 
     Brand: "Asus",
     "Model Name": "VivoBook",
@@ -3345,7 +3343,7 @@ const oldecommerceData = [
     image:
       "https://images.telkom.co.za/backend-files/2023-11/iPhone_15_Plus_128GB_Black_slide.png",
     price: 9299,
-    product_name:
+    title:
       "realme narzo N48 (Purple, 4GB+64GB) 22W Segment Fast Charging | 48MP Primary Camera",
 
     Brand: "Realme",
@@ -3362,7 +3360,7 @@ const oldecommerceData = [
     id: 4,
     image: "https://m.media-amazon.com/images/I/81zMfbWnNDL._UL1500_.jpg",
     price: 1234,
-    product_name: "Titan silver Watch",
+    title: "Titan silver Watch",
 
     Brand: "Titan",
     Colour: "silver",
@@ -3381,7 +3379,7 @@ const oldecommerceData = [
     image:
       "https://images-na.ssl-images-amazon.com/images/I/61qc69ILWdL._SL1280_.jpg",
     price: 237,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -3401,7 +3399,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.PQ6LCdBFI8fklGvBTpwFCAHaHa&pid=Api&P=0&h=180",
     price: 2150,
-    product_name: "PREP + PRIME FIX+",
+    title: "PREP + PRIME FIX+",
 
     key1: "Soothes and refreshes skin",
     key2: "Hydrating",
@@ -3468,7 +3466,7 @@ const oldecommerceData = [
     key5: "curved hem",
 
     Material_Care: "Cotton Hand wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.8",
   },
@@ -3500,7 +3498,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.gY-fjKOXbXyQGATcYa630gHaIp&pid=Api&P=0&h=180",
     price: 120,
-    product_name: "Fortune chakki Fresh Atta ,",
+    title: "Fortune chakki Fresh Atta ,",
 
     Brand: "FORTUNE",
     "Item Weight": "230 Grams",
@@ -3520,7 +3518,7 @@ const oldecommerceData = [
     id: 12,
     image: "https://m.media-amazon.com/images/I/71mZPdDjUeL.jpg",
     price: 120,
-    product_name: "Fortune chakki Fresh Atta ,",
+    title: "Fortune chakki Fresh Atta ,",
 
     Brand: "FORTUNE",
     "Item Weight": "230 Grams",
@@ -3541,7 +3539,7 @@ const oldecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6443/6443177cv13d.jpg",
     price: 50749.0,
-    product_name: "Apple iPhone 13 (128GB) - Starlight",
+    title: "Apple iPhone 13 (128GB) - Starlight",
 
     Brand: "Apple",
     "Model Name": "iPhone 13",
@@ -3558,7 +3556,7 @@ const oldecommerceData = [
     image:
       "https://i.ebayimg.com/00/s/OTk5WDE2MDA=/z/dpEAAOSwhvNfRrK~/$_57.jpg",
     price: 799.0,
-    product_name: "Apple iPhone SE (2nd Gen) - White",
+    title: "Apple iPhone SE (2nd Gen) - White",
 
     Brand: "Apple",
     "Model Name": "iPhone SE (2nd Gen)",
@@ -3575,7 +3573,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.E9FTOwZCvrD6_6UGnem1TwHaHa&pid=Api&P=0&h=180",
     price: 699.0,
-    product_name: "Apple iPhone 13 Mini (128GB) - Blue",
+    title: "Apple iPhone 13 Mini (128GB) - Blue",
 
     Brand: "Apple",
     "Model Name": "iPhone 13 Mini",
@@ -3592,7 +3590,7 @@ const oldecommerceData = [
     image:
       "https://d1dtruvuor2iuy.cloudfront.net/media/catalog/product/i/p/iphone_13_pro_color_graphite_1__1.jpg",
     price: 999.0,
-    product_name: "Apple iPhone 13 Pro (256GB) - Graphite",
+    title: "Apple iPhone 13 Pro (256GB) - Graphite",
 
     Brand: "Apple",
     "Model Name": "iPhone 13 Pro",
@@ -3609,7 +3607,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.ORjGbzRd3YanpDIbc3_1cQHaJb&pid=Api&P=0&h=180",
     price: 1199.0,
-    product_name: "Apple iPhone 13 Pro Max (512GB) - Gold",
+    title: "Apple iPhone 13 Pro Max (512GB) - Gold",
 
     Brand: "Apple",
     "Model Name": "iPhone 13 Pro Max",
@@ -3626,7 +3624,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.kuKOUEoQY2GVhtGweIwA4gHaKB&pid=Api&P=0&h=180",
     price: 1199.0,
-    product_name: "Apple iPhone 12 (128GB) - Black",
+    title: "Apple iPhone 12 (128GB) - Black",
 
     Brand: "Apple",
     "Model Name": "iPhone 12",
@@ -3643,7 +3641,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.EZqu0KQK2tygYil04Q_E-wHaHp&pid=Api&P=0&h=180",
     price: 899.0,
-    product_name: "Apple iPhone 11 (64GB) - White",
+    title: "Apple iPhone 11 (64GB) - White",
 
     Brand: "Apple",
     "Model Name": "iPhone 11",
@@ -3660,7 +3658,7 @@ const oldecommerceData = [
     image:
       "https://www.vedion.pl/pol_pl_Apple-iPhone-XR-Coral-64GB-Smartfon-Klasa-A-13144_4.jpg",
     price: 649.0,
-    product_name: "Apple iPhone XR (64GB) - Coral",
+    title: "Apple iPhone XR (64GB) - Coral",
 
     Brand: "Apple",
     "Model Name": "iPhone XR",
@@ -3677,7 +3675,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.uQ3Kux8TdCm2EMIIVOaKygHaHa&pid=Api&P=0&h=180",
     price: 549.0,
-    product_name: "Apple iPhone X (64GB) - Silver",
+    title: "Apple iPhone X (64GB) - Silver",
 
     Brand: "Apple",
     "Model Name": "iPhone X",
@@ -3694,7 +3692,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.1v-EphEv_pCXeGLH_VAp2gHaGr&pid=Api&P=0&h=180",
     price: 799.0,
-    product_name: "Apple iPhone 11 Pro (256GB) - Midnight Green",
+    title: "Apple iPhone 11 Pro (256GB) - Midnight Green",
 
     Brand: "Apple",
     "Model Name": "iPhone 11 Pro",
@@ -3712,7 +3710,7 @@ const oldecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2990/2990013cv1a.jpg",
     price: 7699,
-    product_name: "Asus VivoBook 13.3-inch Laptop",
+    title: "Asus VivoBook 13.3-inch Laptop",
 
     Brand: "Asus",
     "Model Name": "VivoBook",
@@ -3731,7 +3729,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.VLOGbGtgbYDP-6sGL6hrpQHaHI&pid=Api&P=0&h=180",
     price: 8499,
-    product_name: "Dell XPS 13.4-inch Laptop",
+    title: "Dell XPS 13.4-inch Laptop",
 
     Brand: "Dell",
     "Model Name": "XPS",
@@ -3750,7 +3748,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.KV4ypdEVzz-0qlEH1FX7IQHaE1&pid=Api&P=0&h=180",
     price: 6999,
-    product_name: "HP Spectre x360 13.3-inch Laptop",
+    title: "HP Spectre x360 13.3-inch Laptop",
 
     Brand: "HP",
     "Model Name": "Spectre x360",
@@ -3769,7 +3767,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.1zDqOt9-V5DZVnrbZrHcvgHaFs&pid=Api&P=0&h=180",
     price: 8999,
-    product_name: "Lenovo ThinkPad X1 Carbon 14-inch Laptop",
+    title: "Lenovo ThinkPad X1 Carbon 14-inch Laptop",
 
     Brand: "Lenovo",
     "Model Name": "ThinkPad X1 Carbon",
@@ -3788,7 +3786,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.gypHBLwpat8Zbopwv-GAHgHaFS&pid=Api&P=0&h=180",
     price: 7799,
-    product_name: "Acer Swift 3 14-inch Laptop",
+    title: "Acer Swift 3 14-inch Laptop",
 
     Brand: "Acer",
     "Model Name": "Swift 3",
@@ -3807,7 +3805,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.4tr4kBBB-b5BH9c7giqt1wHaFE&pid=Api&P=0&h=180",
     price: 7499,
-    product_name: "Microsoft Surface Laptop 4 13.5-inch",
+    title: "Microsoft Surface Laptop 4 13.5-inch",
 
     Brand: "Microsoft",
     "Model Name": "Surface Laptop 4",
@@ -3826,7 +3824,7 @@ const oldecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6452/6452585_sd.jpg",
     price: 7999,
-    product_name: "Razer Blade 15 Base Gaming Laptop",
+    title: "Razer Blade 15 Base Gaming Laptop",
 
     Brand: "Razer",
     "Model Name": "Blade 15",
@@ -3845,7 +3843,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.lPTarZEUomrE-EnvSFUuwwHaFb&pid=Api&P=0&h=180",
     price: 8899,
-    product_name: "LG Gram 17-inch Laptop",
+    title: "LG Gram 17-inch Laptop",
 
     Brand: "LG",
     "Model Name": "Gram",
@@ -3864,7 +3862,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.3GJc17v1NlixESfObeUvkAHaFs&pid=Api&P=0&h=180",
     price: 7699,
-    product_name: "Sony VAIO S 13.3-inch Laptop",
+    title: "Sony VAIO S 13.3-inch Laptop",
 
     Brand: "Sony",
     "Model Name": "VAIO S",
@@ -3883,7 +3881,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.FCnYD25fYvrfxmRuQ2ieXwHaFS&pid=Api&P=0&h=180",
     price: 8999,
-    product_name: "Dell Inspiron 15 15.6-inch Laptop",
+    title: "Dell Inspiron 15 15.6-inch Laptop",
 
     Brand: "Dell",
     "Model Name": "Inspiron 15",
@@ -3902,7 +3900,7 @@ const oldecommerceData = [
     image:
       "https://store.hp.com/UKStore/Html/Merch/Images/c06045798_1750x1285.jpg",
     price: 8499,
-    product_name: "HP Pavilion 14 14-inch Laptop",
+    title: "HP Pavilion 14 14-inch Laptop",
 
     Brand: "HP",
     "Model Name": "Pavilion 14",
@@ -3921,7 +3919,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.5wXvXe-0xNCAxLbkcuaACQHaFQ&pid=Api&P=0&h=180",
     price: 7899,
-    product_name: "Lenovo ThinkPad L13 13.3-inch Laptop",
+    title: "Lenovo ThinkPad L13 13.3-inch Laptop",
 
     Brand: "Lenovo",
     "Model Name": "ThinkPad L13",
@@ -3940,7 +3938,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.Q9yPp7_aWGbCwgzxvaN9-QHaFX&pid=Api&P=0&h=180",
     price: 6999,
-    product_name: "Acer Aspire 5 15.6-inch Laptop",
+    title: "Acer Aspire 5 15.6-inch Laptop",
 
     Brand: "Acer",
     "Model Name": "Aspire 5",
@@ -3959,7 +3957,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.jwkn7f9h9v-o2SX-21ZwWAHaE0&pid=Api&P=0&h=180",
     price: 8799,
-    product_name: "Microsoft Surface Laptop Go 12.4-inch",
+    title: "Microsoft Surface Laptop Go 12.4-inch",
 
     Brand: "Microsoft",
     "Model Name": "Surface Laptop Go",
@@ -3978,7 +3976,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.AjYndGDjiIiQgz8e7b_8ywHaEm&pid=Api&P=0&h=180",
     price: 100699,
-    product_name: "Apple MacBook Air 13.3-inch Laptop",
+    title: "Apple MacBook Air 13.3-inch Laptop",
 
     Brand: "Apple",
     "Model Name": "MacBook Air",
@@ -3997,7 +3995,7 @@ const oldecommerceData = [
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6115/6115550_rd.jpg",
     price: 7999,
-    product_name: "Razer Blade 17 Pro Gaming Laptop",
+    title: "Razer Blade 17 Pro Gaming Laptop",
 
     Brand: "Razer",
     "Model Name": "Blade 17 Pro",
@@ -4016,7 +4014,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.WUPiZk7JFmqp6nhMTg78YAHaHa&pid=Api&P=0&h=180",
     price: 7899,
-    product_name: "LG Gram 14 14-inch Laptop",
+    title: "LG Gram 14 14-inch Laptop",
 
     Brand: "LG",
     "Model Name": "Gram 14",
@@ -4035,7 +4033,7 @@ const oldecommerceData = [
     image:
       "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/VI0AAOSw9f9eUCu8/$_86.JPG",
     price: 7599,
-    product_name: "Sony VAIO E 15.6-inch Laptop",
+    title: "Sony VAIO E 15.6-inch Laptop",
 
     Brand: "Sony",
     "Model Name": "VAIO E",
@@ -4055,7 +4053,7 @@ const oldecommerceData = [
     image:
       "https://www.droidafrica.net/wp-content/uploads/2023/11/Logic-L66-full-specification-and-price.jpg",
     price: 9299,
-    product_name:
+    title:
       "Realme Narzo N48 (Purple, 4GB+64GB) 22W Segment Fast Charging | 48MP Primary Camera",
 
     Brand: "Realme",
@@ -4073,7 +4071,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIF.W%2bE9AA79%2f7mLshfqTTr%2fUw&pid=Api&P=0&h=180",
     price: 10999,
-    product_name:
+    title:
       "Realme 8 Pro (Blue, 6GB+128GB) 50W SuperDart Charging | 108MP Quad Camera",
 
     Brand: "Realme",
@@ -4091,7 +4089,7 @@ const oldecommerceData = [
     image:
       "https://i.bikroy-st.com/lg-velvet-8-128gb-new-for-sale-dhaka-103/1ec7aa8c-7d1c-4aea-935d-0913afab91d3/1200/630/fitted.jpg",
     price: 7999,
-    product_name:
+    title:
       "Realme C25s (Green, 4GB+64GB) 18W Quick Charge | 48MP Dual Camera",
 
     Brand: "Realme",
@@ -4109,7 +4107,7 @@ const oldecommerceData = [
     image:
       "https://i.pinimg.com/736x/cc/df/72/ccdf7248117aba169991b5cf63ac5a9d.jpg",
     price: 8999,
-    product_name:
+    title:
       "Realme 7i (Silver, 4GB+64GB) 18W Quick Charge | 64MP Quad Camera",
 
     Brand: "Realme",
@@ -4127,7 +4125,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIF.ZY6Qi0IiIbpZ2FVm8SPLpw&pid=Api&P=0&h=180",
     price: 7499,
-    product_name:
+    title:
       "Realme C11 (Gray, 3GB+32GB) 5000mAh Battery | 13MP Dual Camera",
 
     Brand: "Realme",
@@ -4146,7 +4144,7 @@ const oldecommerceData = [
     image:
       "https://n3.sdlcdn.com/imgs/b/e/3/Titan-Silver-Steel-Analog-Watch-SDL545819100-1-70e7c.jpg",
     price: 1234,
-    product_name: "Titan Silver Watch",
+    title: "Titan Silver Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4162,7 +4160,7 @@ const oldecommerceData = [
     image:
       "https://staticimg.titan.co.in/production/India/Titan/detail2/90081NL01J.jpg",
     price: 1399,
-    product_name: "Titan Chronograph Watch",
+    title: "Titan Chronograph Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -4178,7 +4176,7 @@ const oldecommerceData = [
     image:
       "https://staticimg.titan.co.in/production/India/Titan/detail2/1721YM01.jpg",
     price: 999,
-    product_name: "Titan Gold Plated Watch",
+    title: "Titan Gold Plated Watch",
 
     Brand: "Titan",
     Colour: "Gold",
@@ -4193,7 +4191,7 @@ const oldecommerceData = [
     id: 49,
     image: "https://staticimg.titan.co.in/Titan/Catalog/90125WL02_1.jpg",
     price: 1499,
-    product_name: "Titan Rose Gold Watch",
+    title: "Titan Rose Gold Watch",
 
     Brand: "Titan",
     Colour: "Rose Gold",
@@ -4209,7 +4207,7 @@ const oldecommerceData = [
     image:
       "https://rukminim1.flixcart.com/image/1664/1664/watch/8/g/6/9162sl01-titan-original-imadptzuwhgnqzmk.jpeg?q=90",
     price: 1299,
-    product_name: "Titan Classic Leather Watch",
+    title: "Titan Classic Leather Watch",
 
     Brand: "Titan",
     Colour: "Brown",
@@ -4225,7 +4223,7 @@ const oldecommerceData = [
     image:
       "https://i.pinimg.com/736x/d6/82/70/d682703c1ecdf49b102dfb0027e5c183.jpg",
     price: 1899,
-    product_name: "Titan Sports Watch",
+    title: "Titan Sports Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -4241,7 +4239,7 @@ const oldecommerceData = [
     image:
       "https://www.stylegods.com/wp-content/uploads/2016/09/rust-1021x1024.jpg",
     price: 1699,
-    product_name: "Titan Luxury Watch",
+    title: "Titan Luxury Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4257,7 +4255,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.wzzROYx08eAepXxeWeSbnQHaHa&pid=Api&P=0&h=180",
     price: 999,
-    product_name: "Titan Minimalist Watch",
+    title: "Titan Minimalist Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4273,7 +4271,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.FcgrRV0v2LrosqtZX61JdAHaHa&pid=Api&P=0&h=180",
     price: 1299,
-    product_name: "Titan Diamond-Encrusted Watch",
+    title: "Titan Diamond-Encrusted Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4289,7 +4287,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.FcgrRV0v2LrosqtZX61JdAHaHa&pid=Api&P=0&h=180",
     price: 1799,
-    product_name: "Titan Women's Fashion Watch",
+    title: "Titan Women's Fashion Watch",
 
     Brand: "Titan",
     Colour: "Rose Gold",
@@ -4304,7 +4302,7 @@ const oldecommerceData = [
     id: 56,
     image: "https://staticimg.titan.co.in/Titan/Catalog/1676SL01_1.jpg",
     price: 1199,
-    product_name: "Titan Square Dial Watch",
+    title: "Titan Square Dial Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4320,7 +4318,7 @@ const oldecommerceData = [
     image:
       "https://cdn.igp.com/f_auto,q_auto,t_prodl/products/p-titan-elegant-analog-watch-for-women-113711-m.jpg",
     price: 1499,
-    product_name: "Titan Elegant Watch",
+    title: "Titan Elegant Watch",
 
     Brand: "Titan",
     Colour: "Gold",
@@ -4336,7 +4334,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.KgqXjFeocjR5bjI4zTRmiQHaHa&pid=Api&P=0&h=180",
     price: 1699,
-    product_name: "Titan Business Watch",
+    title: "Titan Business Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -4351,7 +4349,7 @@ const oldecommerceData = [
     id: 59,
     image: "https://staticimg.titan.co.in/Titan/Catalog/1707NL01_1.jpg",
     price: 1599,
-    product_name: "Titan Casual Watch",
+    title: "Titan Casual Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4367,7 +4365,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.Kbih2ja0XsosM5cseOgxKAHaJ4&pid=Api&P=0&h=180",
     price: 1899,
-    product_name: "Titan Designer Watch",
+    title: "Titan Designer Watch",
 
     Brand: "Titan",
     Colour: "Silver",
@@ -4383,7 +4381,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.iVJoyQkDMRAIJzlomEJ2iAAAAA&pid=Api&P=0&h=180",
     price: 1199,
-    product_name: "Titan Stylish Watch",
+    title: "Titan Stylish Watch",
 
     Brand: "Titan",
     Colour: "Black",
@@ -5100,7 +5098,7 @@ const oldecommerceData = [
     subCategory: "kids",
     rating: "4.4",
   },
-  //mens
+  //men
   {
     id: 99,
     image:
@@ -5115,7 +5113,7 @@ const oldecommerceData = [
     key5: "Material: Polyester and Viscose",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -5133,7 +5131,7 @@ const oldecommerceData = [
     key5: "Material: Denim",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -5151,7 +5149,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -5169,7 +5167,7 @@ const oldecommerceData = [
     key5: "Material: Polyester and Viscose",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.3",
   },
@@ -5187,7 +5185,7 @@ const oldecommerceData = [
     key5: "Material: Genuine Leather",
 
     Material_Care: "Dry clean",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.7",
   },
@@ -5205,7 +5203,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -5223,7 +5221,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -5241,7 +5239,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -5259,7 +5257,7 @@ const oldecommerceData = [
     key5: "Material: Polyester",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.7",
   },
@@ -5277,7 +5275,7 @@ const oldecommerceData = [
     key5: "Material: Stainless Steel",
 
     Material_Care: "Wipe with a clean cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -5295,7 +5293,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -5313,7 +5311,7 @@ const oldecommerceData = [
     key5: "Material: Genuine Leather",
 
     Material_Care: "Wipe with a damp cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -5331,7 +5329,7 @@ const oldecommerceData = [
     key5: "Material: Cotton",
 
     Material_Care: "Machine wash",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.4",
   },
@@ -5349,7 +5347,7 @@ const oldecommerceData = [
     key5: "Material: Synthetic",
 
     Material_Care: "Wipe with a clean cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.5",
   },
@@ -5367,7 +5365,7 @@ const oldecommerceData = [
     key5: "Material: Metal and Polycarbonate",
 
     Material_Care: "Clean with a microfiber cloth",
-    subCategory: "mens",
+    subCategory: "men",
     category: "fashion",
     rating: "4.6",
   },
@@ -5377,7 +5375,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.MFhs12UEbfokD7zA23pInAHaHa&pid=Api&P=0&h=180",
     price: 50,
-    product_name: "Lays Potato Chips - Classic Salted, 52g",
+    title: "Lays Potato Chips - Classic Salted, 52g",
 
     Brand: "Lays",
     "Diet Type": "Vegetarian",
@@ -5399,7 +5397,7 @@ const oldecommerceData = [
     image:
       "https://www.india-store.de/images/thumbnail/produkte/large/food01/002/kurkure_green_chutney.jpg",
     price: 35,
-    product_name: "Kurkure Namkeen - Green Chutney Rajasthani Style, 58g",
+    title: "Kurkure Namkeen - Green Chutney Rajasthani Style, 58g",
 
     Brand: "Kurkure",
     "Diet Type": "Vegetarian",
@@ -5422,7 +5420,7 @@ const oldecommerceData = [
     image:
       "https://www.bigbasket.com/media/uploads/p/l/100566579_1-kurkure-namkeen-puffcorn-mad-masala.jpg",
     price: 45,
-    product_name: "Kurkure Namkeen - Puffcorn, 80g",
+    title: "Kurkure Namkeen - Puffcorn, 80g",
 
     Brand: "Kurkure",
     "Diet Type": "Vegetarian",
@@ -5444,7 +5442,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.uIHVdwqamO0f79biFHwTKAHaKl&pid=Api&P=0&h=180",
     price: 60,
-    product_name: "Haldiram's Aloo Bhujia - Spicy Potato Noodles, 150g",
+    title: "Haldiram's Aloo Bhujia - Spicy Potato Noodles, 150g",
 
     Brand: "Haldiram's",
     "Diet Type": "Vegetarian",
@@ -5466,7 +5464,7 @@ const oldecommerceData = [
     image:
       "https://cdn.shopify.com/s/files/1/1610/6897/products/oie_161647496qVjGhz1_grande.jpg?v=1602859766",
     price: 70,
-    product_name: "Kissan Fruit Jam - Mixed Fruit, 320g",
+    title: "Kissan Fruit Jam - Mixed Fruit, 320g",
 
     Brand: "Kissan",
     "Diet Type": "Vegetarian",
@@ -5488,7 +5486,7 @@ const oldecommerceData = [
     image:
       "https://www.jiomart.com/images/product/600x600/491551830/bingo-peri-peri-mad-angles-130-g-product-images-o491551830-p491551830-0-202203150713.jpg",
     price: 50,
-    product_name: "Bingo! Mad Angles - Peri Peri, 85g",
+    title: "Bingo! Mad Angles - Peri Peri, 85g",
 
     Brand: "Bingo!",
     "Diet Type": "Vegetarian",
@@ -5510,7 +5508,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.rOFtRrTDsEpwI5CHGY8uKgHaHa&pid=Api&P=0&h=180",
     price: 55,
-    product_name: "Parle-G Biscuits - Original, 200g",
+    title: "Parle-G Biscuits - Original, 200g",
 
     Brand: "Parle-G",
     "Diet Type": "Vegetarian",
@@ -5532,7 +5530,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.1eqKykZfX1FEzFAQHGIsYwHaHa&pid=Api&P=0&h=180",
     price: 40,
-    product_name: "Maggi 2-Minute Noodles - Masala, 70g",
+    title: "Maggi 2-Minute Noodles - Masala, 70g",
 
     Brand: "Maggi",
     "Diet Type": "Vegetarian",
@@ -5554,7 +5552,7 @@ const oldecommerceData = [
     image:
       "https://annachi.fr/wp-content/uploads/2022/08/Saffola-Oats-Masala-Coriander.jpg",
     price: 65,
-    product_name: "Saffola Oats - Masala & Coriander, 38g",
+    title: "Saffola Oats - Masala & Coriander, 38g",
 
     Brand: "Saffola",
     "Diet Type": "Vegetarian",
@@ -5576,7 +5574,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.UrKbx415Kh5b5F1oMu8dxwHaGg&pid=Api&P=0&h=180",
     price: 75,
-    product_name: "Haldiram's Soan Papdi - Classic Indian Sweet, 250g",
+    title: "Haldiram's Soan Papdi - Classic Indian Sweet, 250g",
 
     Brand: "Haldiram's",
     "Diet Type": "Vegetarian",
@@ -5598,7 +5596,7 @@ const oldecommerceData = [
     image:
       "https://www.bigbasket.com/media/uploads/p/l/280474_5-britannia-bourbon-chocolate-cream-biscuits.jpg",
     price: 55,
-    product_name: "Britannia Bourbon Biscuits - Chocolate Flavour, 120g",
+    title: "Britannia Bourbon Biscuits - Chocolate Flavour, 120g",
 
     Brand: "Britannia",
     "Diet Type": "Vegetarian",
@@ -5620,7 +5618,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.nJmZ2Hx9YAhhcA_cAVae1gHaHa&pid=Api&P=0&h=180",
     price: 60,
-    product_name: "Cadbury Dairy Milk Chocolate Bar - 40g",
+    title: "Cadbury Dairy Milk Chocolate Bar - 40g",
 
     Brand: "Cadbury",
     "Diet Type": "Vegetarian",
@@ -5643,7 +5641,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.nKB6TAVC3ZjdLAZS5XVOJQHaHa&pid=Api&P=0&h=180",
     price: 55,
-    product_name: "Lays Potato Chips - Classic Salted, 70g",
+    title: "Lays Potato Chips - Classic Salted, 70g",
 
     Brand: "Lays",
     "Diet Type": "Vegetarian",
@@ -5666,7 +5664,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.i3An2q7q3w830e1lwFAOdQHaH6&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Fresh Tomatoes",
+    title: "Fresh Tomatoes",
 
     "Item Weight": "500 Grams",
     "Number of Items": 5,
@@ -5682,7 +5680,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.YNfCtBmWznRnb_v2URt0aQHaHa&pid=Api&P=0&h=180",
     price: 40,
-    product_name: "Bananas",
+    title: "Bananas",
 
     "Item Weight": "1 Kilogram",
     "Number of Items": 6,
@@ -5698,7 +5696,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.DfaU-pSxB5aWC2uMPlFoiAHaHa&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -5714,7 +5712,7 @@ const oldecommerceData = [
     image:
       "https://hybrisprod.azureedge.net/sys-master-prod/he3/h54/8948136509470/65068_main.jpg_1700Wx1700H",
     price: 25,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -5730,7 +5728,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.X9ynJQfAkAjXErR13CHjDQHaHa&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "cumin",
+    title: "cumin",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -5748,7 +5746,7 @@ const oldecommerceData = [
     image:
       "https://www.alphafoodie.com/wp-content/uploads/2020/04/Turmeric-Powder-Square-photo.jpeg",
     price: 20,
-    product_name: "Turmeric Powder",
+    title: "Turmeric Powder",
 
     "Item Weight": "150 Grams",
     "Number of Items": 2,
@@ -5764,7 +5762,7 @@ const oldecommerceData = [
     image:
       "https://www.onceuponachef.com/images/2013/12/basmati-rice-1200x912.jpg",
     price: 30,
-    product_name: "Basmati Rice",
+    title: "Basmati Rice",
 
     "Item Weight": "1 kg",
     "Number of Items": 1,
@@ -5780,7 +5778,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.Rkm56aP3Kel0lQzMZjJ8xgHaFj&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Red Lentils",
+    title: "Red Lentils",
 
     "Item Weight": "500 Grams",
     "Number of Items": 2,
@@ -5796,7 +5794,7 @@ const oldecommerceData = [
     image:
       "https://i5.walmartimages.com/asr/a6f6fdd5-1482-45c8-a926-ca0e643951be.875089d20cc94e4e1becab143731149c.jpeg",
     price: 18,
-    product_name: "Garam Masala",
+    title: "Garam Masala",
 
     "Item Weight": "200 Grams",
     "Number of Items": 1,
@@ -5812,7 +5810,7 @@ const oldecommerceData = [
     image:
       "https://i.pinimg.com/originals/a6/19/6e/a6196e885afe7e684c033ac41ad9e186.jpg",
     price: 25,
-    product_name: "Whole Wheat Flour",
+    title: "Whole Wheat Flour",
 
     "Item Weight": "1.5 kg",
     "Number of Items": 1,
@@ -5828,7 +5826,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.OrD-0SE3pvuxamciektv-AHaE8&pid=Api&P=0&h=180",
     price: 12,
-    product_name: "Green Tea",
+    title: "Green Tea",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -5844,7 +5842,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.0WhWZ7Bef8yNm9CBWhDScgHaIl&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Honey",
+    title: "Honey",
 
     "Item Weight": "500 Grams",
     "Number of Items": 1,
@@ -5860,7 +5858,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.CEwuREmOawNisBfTIP2zBQHaE7&pid=Api&P=0&h=180",
     price: 14,
-    product_name: "Chickpeas",
+    title: "Chickpeas",
 
     "Item Weight": "400 Grams",
     "Number of Items": 2,
@@ -5876,7 +5874,7 @@ const oldecommerceData = [
     image:
       "https://i5.walmartimages.com/asr/023f668d-3120-4bc1-856a-9f247c1f2523.09c0677395a54eaafcb73fb7fe80fa72.jpeg",
     price: 35,
-    product_name: "Olive Oil",
+    title: "Olive Oil",
 
     "Item Weight": "750 ml",
     "Number of Items": 1,
@@ -5892,7 +5890,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.x06q6QBj_yYghhqtsZgD5AHaG2&pid=Api&P=0&h=180",
     price: 28,
-    product_name: "Quinoa",
+    title: "Quinoa",
 
     "Item Weight": "250 Grams",
     "Number of Items": 3,
@@ -5908,7 +5906,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.Vzt54qScZDNUp4jljxlrigHaHa&pid=Api&P=0&h=180",
     price: 18,
-    product_name: "Black Pepper",
+    title: "Black Pepper",
 
     "Item Weight": "150 Grams",
     "Number of Items": 2,
@@ -5924,7 +5922,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.6lpCTGp1vfhBactY-AwilAHaHa&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Almonds",
+    title: "Almonds",
 
     "Item Weight": "200 Grams",
     "Number of Items": 1,
@@ -5940,7 +5938,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.msnSQb9azJFTWc9bf024MwHaHa&pid=Api&P=0&h=180",
     price: 16,
-    product_name: "Whole Cumin Seeds",
+    title: "Whole Cumin Seeds",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -5956,7 +5954,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.xcrDBryJPJPA3m3NQhGXLgHaLH&pid=Api&P=0&h=180",
     price: 14,
-    product_name: "Chia Seeds",
+    title: "Chia Seeds",
 
     "Item Weight": "250 Grams",
     "Number of Items": 2,
@@ -5972,7 +5970,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.0ysAcFqy--PIlqXxWEsrIQHaFA&pid=Api&P=0&h=180",
     price: 20,
-    product_name: "Dried Apricots",
+    title: "Dried Apricots",
 
     "Item Weight": "300 Grams",
     "Number of Items": 1,
@@ -5988,7 +5986,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.sux4tFLajxTkTFlnD2bQ-wHaHa&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Organic Brown Rice",
+    title: "Organic Brown Rice",
 
     "Item Weight": "1 kg",
     "Number of Items": 1,
@@ -6004,7 +6002,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.FntLOnPgH3pOmcZWvljTjgHaHm&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Mustard Seeds",
+    title: "Mustard Seeds",
     product_details: {
       "Item Weight": "150 Grams",
       "Number of Items": 2,
@@ -6020,7 +6018,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.p6cW5VWMKZD-82xxSksRbAHaJQ&pid=Api&P=0&h=180",
     price: 22,
-    product_name: "Organic Maple Syrup",
+    title: "Organic Maple Syrup",
     product_details: {
       "Item Weight": "500 ml",
       "Number of Items": 1,
@@ -6036,7 +6034,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.dfEyfuhq2j9GsONxMJp0ZgHaFi&pid=Api&P=0&h=180",
     price: 18,
-    product_name: "Whole Coriander Seeds",
+    title: "Whole Coriander Seeds",
 
     Type: "Spice",
     Category: "Whole Spices",
@@ -6054,7 +6052,7 @@ const oldecommerceData = [
     image:
       "https://tse3.mm.bing.net/th?id=OIP.9nXBFWD-mj2qAeXDizco-gHaH_&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Earl Grey Tea",
+    title: "Earl Grey Tea",
 
     Type: "Tea",
     Category: "Tea and Infusions",
@@ -6072,7 +6070,7 @@ const oldecommerceData = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.S74IxtwJ0cklwEN3OolEowHaFj&pid=Api&P=0&h=180",
     price: 30,
-    product_name: "Masala Chai",
+    title: "Masala Chai",
 
     "Item Weight": "250 Grams",
     "Number of Items": 1,
@@ -6088,7 +6086,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.nYVnnpt4IiOSbjSESJpyMAHaE8&pid=Api&P=0&h=180",
     price: 15,
-    product_name: "Roasted Coffee Beans",
+    title: "Roasted Coffee Beans",
 
     "Item Weight": "500 Grams",
     "Number of Items": 1,
@@ -6104,7 +6102,7 @@ const oldecommerceData = [
     image:
       "https://images.creativemarket.com/0.1.0/ps/6060971/1820/2730/m1/fpnw/wm1/qcdpmm5cfnlh1124gwnh0i6fmc0xtaa8epavtqaalgnhhxgcdvctqzgoo6yn15vo-.jpg?1552511804&s=4737547c4f3287e4552d1397af26e319",
     price: 18,
-    product_name: "Orange Juice",
+    title: "Orange Juice",
 
     "Item Weight": "1 liter",
     "Number of Items": 1,
@@ -6120,7 +6118,7 @@ const oldecommerceData = [
     image:
       "https://tse4.mm.bing.net/th?id=OIP.XOHacRpgP9KdBs3Hg2Fz6AHaLH&pid=Api&P=0&h=180",
     price: 25,
-    product_name: "Mango Lassi",
+    title: "Mango Lassi",
 
     "Item Weight": "750 ml",
     "Number of Items": 1,
@@ -6136,7 +6134,7 @@ const oldecommerceData = [
     image:
       "https://tse1.mm.bing.net/th?id=OIP.JZ9SnKKvF6sUSu5S7fOk6AHaHa&pid=Api&P=0&h=180",
     price: 12,
-    product_name: "Green Tea",
+    title: "Green Tea",
 
     "Item Weight": "100 Grams",
     "Number of Items": 3,
@@ -6152,7 +6150,7 @@ const oldecommerceData = [
     image:
       "https://swissbeauty.in/collections/all-time-favourite?utm_source=HPsection&utm_medium=Allfavourite&utm_campaign=Allfavourit",
     price: 999,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -6170,7 +6168,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQILnloPqzY0XbRYCOn92CPEWjJqUxglaxIJBjEqHuBo6MJ9XEvDjwBNFxuVjbvoNLhX8pYTrs24Vj2tCC2c-nUvGSe4j7Vx2bvu_Hv9GQpiBhMbHh6pz-1wA&usqp=CAE",
     price: 237,
-    product_name:
+    title:
       "Swiss Beauty Long Lasting Makeup Fixer Natural Aloe Vera With Vitamin-E (70ml)",
 
     key1: "Swiss Beauty Makeup Fixer is useful for setting your makeup.",
@@ -6188,7 +6186,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSvK2JxD3ydu138hszMEoTx0hgjj7xczgPOpnaIpDg6nsE_choVgKQXIyOSnoyZhrBoA6S2jFkfNTz27yyjCOy6Ew9yqolA1i4orumo8X0WfjT0i42j5fwP&usqp=CAE",
     price: 3300,
-    product_name: "M.A.C Studio Fix Powder Plus Foundation - C2 (15g)",
+    title: "M.A.C Studio Fix Powder Plus Foundation - C2 (15g)",
 
     key1: "12-Hour Medium-To-Full Coverage",
     key2: "Ultra-Matte Finish",
@@ -6204,7 +6202,7 @@ const oldecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_MW5K01_1x1_0.png?width=1080&height=1080",
     price: 2150,
-    product_name: "PREP + PRIME FIX+",
+    title: "PREP + PRIME FIX+",
 
     key1: "Soothes and refreshes skin",
     key2: "Hydrating",
@@ -6221,7 +6219,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSuBVb2w2SICrcRYoMf6wRD_U7WYcdDc9Oty1ZfNmVP7wIpEA2sp6SVqQwIUfkCoQBcbOiQxnVZv9Te8ZYkLSwLca7mQy2-SCpiUrY7g5_iB4usWm3nf621hpEQSFPdrfFlsUh4OyY&usqp=CAc",
     price: 1950,
-    product_name: "MATTE LIPSTICK",
+    title: "MATTE LIPSTICK",
 
     key1: "Amplified: cream finish",
     key2: "Cremesheen: high-shine finish",
@@ -6238,7 +6236,7 @@ const oldecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_SMXF08_1x1_0.png?width=1080&height=1080",
     price: 2200,
-    product_name: "LUSTREGLASS LIPSTICK",
+    title: "LUSTREGLASS LIPSTICK",
     key1: "Lustrous glossy finish",
     key2: "Sheer, buildable coverage",
     key3: "Long-wearing colour, up to 8 hours",
@@ -6254,7 +6252,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1113100/OGbQIWJjh2-8904409701648_1.jpg?dpr=1",
     price: 2223,
-    product_name:
+    title:
       "Swiss Beauty Professional Makeup Brush Set - Black, Silver (12 Pcs) ",
     key1: "Made with soft bristles to ensure skin-friendly application",
     key2: "Densely-packed bristles offer optimum coverage of powdered and mineral makeup",
@@ -6270,7 +6268,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/1083119/O2BE-FBnwB-8904323443648_1.jpg?dpr=1",
     price: 970,
-    product_name: "Fragrance & Beyond Fragrance Primer For Unisex (30ml)",
+    title: "Fragrance & Beyond Fragrance Primer For Unisex (30ml)",
     key1: "Perfume primer for men and women infused with hydrating ingredients for long-lasting scent",
     key2: "Nourishes and moisturizes skin for stronger Perfume hold",
     key3: "Keeps skin from drying and scent from disappearing",
@@ -6284,7 +6282,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/colorbar/943126/0/ZvLuQ4sH-y-gfI1aTpBcQ-943126_1.jpg?dpr=1",
     price: 721,
-    product_name: "Colorbar Spotlight Illuminating Lotion (30ml)",
+    title: "Colorbar Spotlight Illuminating Lotion (30ml)",
 
     key1: "Light-reflecting pigments lend the skin a naturally radiant glow",
     key2: "Enriched with mulberry extract to nourish and illuminate skin",
@@ -6303,7 +6301,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1046927/iBA02UPFrm-1046927_1.jpg?dpr=1",
     price: 1322,
-    product_name: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
+    title: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
 
     key1: "it has one swipe pigmentation",
     key2: "The shades are soft to touch",
@@ -6322,7 +6320,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/maybelline-new-york/COMBO_231016085231-SZ2/0/IyGpE9kBLF-9401652_1.jpeg?dpr=1",
     price: 815,
-    product_name: "Maybelline New York Colossal Combo - Kajal & Mascara",
+    title: "Maybelline New York Colossal Combo - Kajal & Mascara",
 
     key1: "Richly pigmented kajal delivers an intense matte color",
     key2: "Long-lasting, waterproof kajal stays for up to 10 hours without smudging",
@@ -6338,7 +6336,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1102622/PhS5-Dh__-773602596195_1.jpg?dpr=1",
     price: 2200,
-    product_name: "M.A.C Stack Mini Mascara - Black (8ml)",
+    title: "M.A.C Stack Mini Mascara - Black (8ml)",
 
     key1: "Formulated to make your lashes look fuller and thicker",
     key2: "Clump- and flake-resistant formula for long-lasting use",
@@ -6354,7 +6352,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/1125342/GjIxudoEW-1125342_1.jpg?dpr=1",
     price: 345,
-    product_name: "Colorbar Vegan Nail Lacquer - 286 Confetti (8ml) ",
+    title: "Colorbar Vegan Nail Lacquer - 286 Confetti (8ml) ",
 
     key1: "Infused with calcium and biotin to strengthen the nails, prevent chipping, and promote nail growth",
     key2: "Features a double flat-wide patented U-cut brush for one-stroke application",
@@ -6370,7 +6368,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1090181/QGW7ymxy4-1090181_1.jpg?dpr=1",
     price: 599,
-    product_name:
+    title:
       "Minimalist 16% Vitamin C Serum With Vitamin E & Ferulic Acid For Brightening (20ml)",
 
     key1: "Niacinamide encourages protein synthesis, minimises melanin concentration, and enhances skin complexion in two weeks",
@@ -6388,7 +6386,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:247/maybelline-new-york/COMBO_231016085231-SZ2/0/IyGpE9kBLF-9401652_1.jpeg?dpr=1",
     price: 815,
-    product_name: "Maybelline New York Colossal Combo - Kajal & Mascara",
+    title: "Maybelline New York Colossal Combo - Kajal & Mascara",
 
     key1: "Richly pigmented kajal delivers an intense matte color",
     key2: "Long-lasting, waterproof kajal stays for up to 10 hours without smudging",
@@ -6404,7 +6402,7 @@ const oldecommerceData = [
     image:
       "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/1046927/iBA02UPFrm-1046927_1.jpg?dpr=1",
     price: 1326,
-    product_name: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
+    title: "MARS Mesmereyes Eyeshadow Palette (3.5gm)",
 
     key1: "it has one swipe pigmentation",
     key2: "The shades are soft to touch",
@@ -6422,7 +6420,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRDadOA2RetLlvnUjMM2akXSH2GDiUc5XT10xuGRiwNGgAAmS6uUE2qS-Fx_TNl7GOkLjKlqY0rVPKXb7RrWgWbwR81dvRklKeRbgLFiUeZYnonSFDlMb1LqBQJVWhZQGYl0MuZqu95&usqp=CAc",
     price: 1800,
-    product_name: "MAC Studio Fix Fluid Foundation (30ml)",
+    title: "MAC Studio Fix Fluid Foundation (30ml)",
 
     key1: "Medium to full coverage foundation",
     key2: "Long-wearing and oil-controlling formula",
@@ -6438,7 +6436,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxJcygtwZbk671xMDbNYQL3JvuljU7y_3rFKTMoG-OOpkF4mQzpZR6k9ewFvTmW36zFzI6BE8Gt43PuhdwwZUfdvHyoUSc2t8GlenN5g_0VTnEf6TNBYuR1ziv8ZpNBgO8qa767oda&usqp=CAc",
     price: 1200,
-    product_name: "MAC Ruby Woo Lipstick",
+    title: "MAC Ruby Woo Lipstick",
 
     key1: "Iconic matte red lipstick",
     key2: "Intense and highly-pigmented color",
@@ -6454,7 +6452,7 @@ const oldecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_MT7E02_1x1_0.png?width=1080&height=1080",
     price: 1600,
-    product_name: "MAC Mineralize Skinfinish Highlighter",
+    title: "MAC Mineralize Skinfinish Highlighter",
     key1: "Luxurious and radiant highlighter",
     key2: "Illuminates the skin with a soft, luminous glow",
     key3: "Baked minerals provide a natural finish",
@@ -6468,7 +6466,7 @@ const oldecommerceData = [
     image:
       "https://sdcdn.io/mac/in/mac_sku_M71P01_1x1_0.png?width=1080&height=1080",
     price: 1500,
-    product_name: "MAC Prep + Prime Fix+ Setting Spray (100ml)",
+    title: "MAC Prep + Prime Fix+ Setting Spray (100ml)",
 
     key1: "Multi-purpose setting spray",
     key2: "Hydrates, refreshes, and sets makeup",
@@ -6483,7 +6481,7 @@ const oldecommerceData = [
     image:
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdQxrvOlzaL3Spq7rFVb5SLTE8shCi3ezas7XAyNeRI_ZkZAhABlNE6lBNmL9YlvJWae-7xUnGDSUC2zEgD9kWFJCaAEv3YNepKoNC1onSF7_lIRBdYxW2UxFUpqxPH8mNTvZ6oOPlLA&usqp=CAc",
     price: 1999,
-    product_name: "MAC Retro Matte Liquid Lipcolour",
+    title: "MAC Retro Matte Liquid Lipcolour",
 
     key1: "Intense liquid matte lipstick",
     key2: "Long-lasting and non-feathering formula",
@@ -6499,7 +6497,7 @@ const oldecommerceData = [
     image:
        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2_lh12lV73ogr8AEZ6tFsQ62W3yuZnV-8lguMar3ZxA&s",
     price: 1399,
-    product_name: "MAC Pro Longwear Concealer (9ml)",
+    title: "MAC Pro Longwear Concealer (9ml)",
 
     key1: "Lightweight, fluid concealer",
     key2: "Provides medium to full coverage",
@@ -6511,13 +6509,5 @@ const oldecommerceData = [
   },
 ];
 
-module.exports = {
-  home,
-  all,
-  grocery,
-  fashion,
-  beautyProduct,
-  electronics,
-  ecommerceData,
-};
+module.exports = {Data};
   

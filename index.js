@@ -1,23 +1,43 @@
-const express = require("express")
-require('./database/config')
-const User = require("./database/user")
-const cors = require("cors")
+const express = require("express");
+require("./database/config");
+const User = require("./database/user");
+const cors = require("cors");
+const { Data } = require("./data");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
-app.get("/", (req, res)=>{
-    res.send("Home")
+app.get("/", (req, res) => {
+  res.send("Home");
+});
+
+app.post("/signup", async (req, res) => {
+  let user = new User(req.body);
+  let result = await user.save();
+  result = result.toObject()
+  delete result.password
+  res.send(result);
+});
+
+app.post("/login", async (req, res) => {
+  if (req.body.password && req.body.email) {
+    let user = await User.findOne(req.body).select("-password");
+    if (user) {
+      res.send(user);
+    } else {
+      res.send({ result: "No user found" });
+    }
+  } else {
+    res.send({ result: "No user found" });
+  }
+});
+
+app.get("/all",(req, res)=>{
+  res.send(Data)
 })
 
-app.post("/signup", async (req, res)=>{
-    let user = new User(req.body)
-    let result = await user.save()
-    res.send(result)
-})
-
-app.listen(2100, ()=>{
-    console.log("Server Started")
-})
+app.listen(2100, () => {
+  console.log("Server Started");
+});
