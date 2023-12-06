@@ -3420,7 +3420,7 @@ const oldecommerceData = [
       "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/1522200/2016/12/22/11482399440518-Anouk-Women-Black-Printed-A-Line-Kurta-8001482399440127-1.jpg",
     price: 654,
     heading:
-      "Anouk Women Black Ethnic Motifs Printed Kurta with Palazzos & With Dupatta",
+      "Anouk Women Black Ethnic Palazzos With Dupatta",
 
     key1: "Red and white geometric print fit & flare dress",
     key2: "V-neck",
