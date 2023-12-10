@@ -407,7 +407,7 @@ const Data = [
 
     Brand: "Asus",
     Model_Name: "VivoBook",
-    Network_Service_Provider: "N/A",
+    Network_Service_Provider: "N/ A",
     Operating_System: "Windows 10",
     Cellular_Technology: "N/A",
     RAM_type: "DDR4",
@@ -3311,7 +3311,8 @@ const Data = [
   },
 ];
 
-// const oldecommerceData = [
+// const oldecommerceData =
+// [
 //   {
 //     id: 1,
 //     image:

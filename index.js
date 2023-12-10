@@ -3,6 +3,8 @@ require("./database/config");
 const User = require("./database/user");
 const cors = require("cors");
 const { Data } = require("./data");
+const productSchema = require('./database/productSchema');
+const cartSchema = require("./database/cartSchema");
 
 const app = express();
 
@@ -33,6 +35,48 @@ app.post("/login", async (req, res) => {
     res.send({ result: "No user found" });
   }
 });
+
+// app.post('/addProduct', async (req, res)=>{
+//   let product = new productSchema(req.body)
+//   let result = await product.save()
+//   res.send(result)
+// })
+
+ 
+app.post('/addProduct', async (req, res) => {
+  const { userId, productId, quantity } = req.body;
+
+  try {
+    let cart = await cartSchema.findOne({ userId });
+
+    if (!cart) {
+      // If the user doesn't have a cart, create a new one
+      cart = new cartSchema({ userId, products: [] });
+    }
+
+    // Check if the product is already in the cart
+    const existingProduct = cart.products.find((p) => p.productId.equals(productId));
+
+    if (existingProduct) {
+      // If the product is already in the cart, update the quantity
+      existingProduct.quantity += quantity || 1;
+    } else {
+      // If the product is not in the cart, add it
+      cart.products.push({ productId, quantity: quantity || 1 });
+    }
+
+    // Save the cart
+    await cart.save();
+
+    res.json(cart);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
+  }
+});
+
+
+
 
 app.get("/all",(req, res)=>{
   res.send(Data)
