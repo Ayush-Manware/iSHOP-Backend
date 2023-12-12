@@ -168,7 +168,7 @@ const Data = [
     image:
       "https://tse2.mm.bing.net/th?id=OIP.K8YHAgKY2zrYdRt28s5fcwAAAA&pid=Api&P=0&h=180",
     price: 70,
-    procdut_name:
+    title:
       "Kurkure Namkeen - Masala Munch, 77g/82g/90g (Weight may vary)",
 
     Brand: "Kurkure",
