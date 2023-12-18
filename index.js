@@ -3,7 +3,6 @@ require("./database/config");
 const User = require("./database/user");
 const cors = require("cors");
 const { Data } = require("./data");
-const productSchema = require('./database/productSchema');
 const cartSchema = require("./database/cartSchema");
 
 const app = express();
@@ -35,12 +34,6 @@ app.post("/login", async (req, res) => {
     res.send({ result: "No user found" });
   }
 });
-
-// app.post('/addProduct', async (req, res)=>{
-//   let product = new productSchema(req.body)
-//   let result = await product.save()
-//   res.send(result)
-// })
 
  
 app.post('/addProduct', async (req, res) => {
@@ -74,9 +67,6 @@ app.post('/addProduct', async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
-
-
-
 
 app.get("/all",(req, res)=>{
   res.send(Data)
